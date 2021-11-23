@@ -1,0 +1,27 @@
+html, body{
+  overflow: hidden;
+}
+.cartoon{
+--brown1: #753;
+width: 80vmin;
+height: 80vmin;
+background: #fee;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.cartoon div {
+  position: absolute;
+}
+
+.body{
+  width: 40%;
+  height: 40%;
+  background: var(--brown1);
+  border-radius: 50%;
+  top: 40%;
+  left: 50%;
+  transform:translate(-50%,0%);
+  box-shadow: -4 20vmin 0 -13vmin
+}
