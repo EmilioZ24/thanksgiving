@@ -3,6 +3,7 @@ html, body{
 }
 .cartoon{
 --brown1: #753;
+--brown2:#975;
 width: 80vmin;
 height: 80vmin;
 background: #fee;
@@ -19,9 +20,64 @@ transform: translate(-50%,-50%);
   width: 40%;
   height: 40%;
   background: var(--brown1);
+  color: var(--brown1);
   border-radius: 50%;
   top: 40%;
   left: 50%;
   transform:translate(-50%,0%);
-  box-shadow: -4 20vmin 0 -13vmin
+  box-shadow:
+  -5vmin 15vmin 0 -13vmin,
+  5vmin 15vmin 0 -13vmin
 }
+
+.wing{
+  height: 35%;
+  width: 20%;
+  background: var(--brown2);
+  border-radius: 100% 0% 100% 5%;
+  top: 41%;
+  left:23%;
+  transform-origin: top right;
+  transform: rotate(-10deg);
+}
+
+.wing + .wing {
+  left: auto;
+  right: 43%;
+  transform: scaleX(-1) rotate(-10deg);
+}
+
+.head {
+  width: 15%;
+  height: 15%;
+  border-radius: 50%;
+  background: var(--brown2);
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.head::before {
+  content: "";
+  display: black;
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  background: var(--brown2);
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,0);
+  border-radius: 0 0 100% 100% / 30%;
+}
+
+.eye {
+  width: 2%;
+  height: 2%;
+  background: black;
+  border-radius: 50%;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 0) translate(-2.5vmin, 0);
+  box-shadow: 5vmin 0;
+}
+.beak 
